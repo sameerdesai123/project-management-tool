@@ -29,7 +29,9 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      
+      <v-app-bar-items>
+        <v-btn flat class="primary">Create Project</v-btn>
+      </v-app-bar-items>
     </v-app-bar>
     <v-content>
       <v-container>
