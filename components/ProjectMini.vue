@@ -4,6 +4,9 @@
   max-width="500"
   :hover="true"
   >
+  <nuxt-link 
+  class="project-link" 
+  :to="{name: 'projects-id', params: { id: project.pid } }">
     <v-card-title>
       {{ project.name }}
     </v-card-title>
@@ -20,6 +23,7 @@
         <v-col>In Progress: {{ project.inProcess }}</v-col>
       </v-row>
     </v-card-text>
+  </nuxt-link>
     <v-card-actions>
       <v-btn icon>
         <v-icon>mdi-bookmark</v-icon>
@@ -44,5 +48,9 @@
 </script>
 
 <style scoped>
+.project-link {
+  text-decoration: none;
+  color: whitesmoke;
+}
 
 </style>
