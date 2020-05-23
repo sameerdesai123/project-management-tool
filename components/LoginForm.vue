@@ -1,6 +1,7 @@
 <template>
   <v-card 
   elevation="24"
+  :loading="sendingReq"
   text-center
   class="justify-center"
   >
@@ -43,14 +44,14 @@
     <v-card-actions class="justify-center">
         <v-btn
         :disabled="!valid && loginForm"
+        :hidden="!loginForm"
         class="primary"
-        @click="validate"
+        @click="login"
       >
         Login
       </v-btn>
       <v-btn
         class="info"
-        :hidden="!loginForm"
         @click="toggleForm"
       >
         Register
@@ -73,8 +74,8 @@ import RegisterForm from '@/components/RegisterForm.vue'
       valid: true,
       pass: '',
       passRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+        v => !!v || 'Password is required',
+        v => (v && v.length <= 10 && v.length >= 6) || 'Name must be between 6 to 10 characters',
       ],
       email: '',
       emailRules: [
@@ -82,20 +83,25 @@ import RegisterForm from '@/components/RegisterForm.vue'
         v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
       ],
       lazy: false,
-      loginForm: true
+      loginForm: true,
+      sendingReq: false
     }),
 
     methods: {
       validate () {
         this.$refs.form.validate()
       },
-      reset () {
-        this.$refs.form.reset()
-      },
-      resetValidation () {
-        this.$refs.form.resetValidation()
+      login () {
+        this.sendingReq = true
+        // try to login Person
+        this.sendingReq = false
       },
       toggleForm () {
+        if(!this.loginForm) {
+          this.sendingReq = true
+          // Register Person
+          this.sendingReq = false
+        }
         this.loginForm = !this.loginForm
         if(this.pageTask === "Login") this.pageTask = "Register"
         else this.pageTask = "Login"

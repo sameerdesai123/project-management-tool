@@ -13,7 +13,7 @@ export default [
         _id: 1,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Completed",
         done: true
       },
@@ -21,7 +21,7 @@ export default [
         _id: 2,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Pending",
         done: false
       },
@@ -29,7 +29,39 @@ export default [
         _id: 3,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
+        status: "In Progress",
+        done: false
+      },
+      {
+        _id: 4,
+        taskTitle: "This is a task title",
+        taskDescription: "This is the description of the task",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
+        status: "In Progress",
+        done: false
+      },
+      {
+        _id: 5,
+        taskTitle: "This is a task title",
+        taskDescription: "This is the description of the task",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
+        status: "Pending",
+        done: false
+      },
+      {
+        _id: 6,
+        taskTitle: "This is a task title",
+        taskDescription: "This is the description of the task",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
+        status: "Pending",
+        done: false
+      },
+      {
+        _id: 7,
+        taskTitle: "This is a task title",
+        taskDescription: "This is the description of the task",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "In Progress",
         done: false
       }
@@ -49,7 +81,7 @@ export default [
         _id: 1,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Completed",
         done: true
       },
@@ -57,7 +89,7 @@ export default [
         _id: 2,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Pending",
         done: false
       },
@@ -65,7 +97,7 @@ export default [
         _id: 3,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "In Progress",
         done: false
       }
@@ -85,7 +117,7 @@ export default [
         _id: 1,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Completed",
         done: true
       },
@@ -93,7 +125,7 @@ export default [
         _id: 2,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Pending",
         done: false
       },
@@ -101,7 +133,7 @@ export default [
         _id: 3,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "In Progress",
         done: false
       }
@@ -121,7 +153,7 @@ export default [
         _id: 1,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Completed",
         done: true
       },
@@ -129,7 +161,7 @@ export default [
         _id: 2,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Pending",
         done: false
       },
@@ -137,7 +169,7 @@ export default [
         _id: 3,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "In Progress",
         done: false
       }
@@ -157,7 +189,7 @@ export default [
         _id: 1,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Completed",
         done: true
       },
@@ -165,7 +197,7 @@ export default [
         _id: 2,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Pending",
         done: false
       },
@@ -173,7 +205,7 @@ export default [
         _id: 3,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "In Progress",
         done: false
       }
@@ -193,7 +225,7 @@ export default [
         _id: 1,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Completed",
         done: true
       },
@@ -201,7 +233,7 @@ export default [
         _id: 2,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "Pending",
         done: false
       },
@@ -209,7 +241,7 @@ export default [
         _id: 3,
         taskTitle: "This is a task title",
         taskDescription: "This is the description of the task",
-        issues: "these are issues in the task (optional)",
+        issues: [ { name: "Issue-1", description: "XYZ"}, { name: "Issue-2", description: "ABC"} ],
         status: "In Progress",
         done: false
       }

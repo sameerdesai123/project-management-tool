@@ -33,6 +33,32 @@
       label="Confirm Password"
       required 
       type="password"></v-text-field>
-
     </v-form>
 </template>
+
+<script>
+export default {
+  data: () => ({
+      pageTask: 'Login',
+      valid: true,
+      pass: '',
+      passRules: [
+        v => !!v || 'Name is required',
+        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+      ],
+      email: '',
+      emailRules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      ],
+      lazy: false,
+      loginForm: true
+    }),
+
+    methods: {
+      validate () {
+        this.$refs.form.validate()
+      }
+    },
+}
+</script>
