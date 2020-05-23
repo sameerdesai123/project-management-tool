@@ -2,7 +2,7 @@
     <v-container :fluid="true">
       <v-row>
         <v-col v-for="project in projects" :key="project.pid">
-          <ProjectMini lg3 md4 sm6 xs8 :project="project"/>
+          <ProjectMini class="min-w-270" :project="project"/>
         </v-col>
       </v-row>
     </v-container>
@@ -27,3 +27,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.min-w-270 {
+  min-width: 250px;
+}
+</style>
