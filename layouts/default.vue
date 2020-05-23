@@ -29,7 +29,20 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn text class="primary">Create Project</v-btn>
+      <v-dialog
+      v-model="dialog"
+      width="500"
+    >
+      <template v-slot:activator="{ on }">
+        <v-btn
+          class="primary"
+          v-on="on"
+        >
+          Login
+        </v-btn>
+      </template>
+      <LoginForm />
+    </v-dialog>
     </v-app-bar>
     <v-content>
       <v-container>
@@ -40,11 +53,14 @@
 </template>
 
 <script>
+import LoginForm from '@/components/LoginForm.vue'
+
 export default {
   data () {
     return {
       drawer: false,
       fixed: false,
+      dialog: false,
       items: [  
         {
           icon: 'mdi-apps',
@@ -59,6 +75,9 @@ export default {
       ],
       title: 'Project Management Tool'
     }
-  }
+  },
+  components: {
+    LoginForm,
+  },
 }
 </script>
