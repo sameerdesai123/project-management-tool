@@ -19,8 +19,7 @@ import TasksDisplay from '@/components/TasksDisplay.vue'
         return this.$route.params.id
       },
       project () {
-        console.log(this.$route.params.id);
-        console.log(this.$store.state.projects.projects[parseInt(this.id) - 101]);
+        // Edit this later
         return this.$store.state.projects.projects[parseInt(this.id) - 101]
       }
     },

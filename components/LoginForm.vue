@@ -1,6 +1,6 @@
 <template>
   <v-card 
-  elevation="24"
+  elevation-24
   :loading="sendingReq"
   text-center
   class="justify-center"

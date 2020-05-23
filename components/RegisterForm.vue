@@ -43,8 +43,8 @@ export default {
       valid: true,
       pass: '',
       passRules: [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+        v => !!v || 'Password is required',
+        v => (v && v.length <= 10 && v.length >= 6) || 'Name must be between 6 to 10 characters',
       ],
       email: '',
       emailRules: [
